@@ -1,8 +1,7 @@
 var fs = require('fs');
-var fdata = fs.readFileSync('index.html', 'utf-8');
+var fdata = fs.readFileSync('index.html', 'utf8');
 var max_len = Buffer.byteLength(fdata, 'utf8');
 var buf = new Buffer(max_len);
-buf.write(fdata, 'utf-8');
 var disp = buf.toString('utf-8');
 console.log(disp);
 var express = require('express');
